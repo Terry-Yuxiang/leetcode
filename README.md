@@ -15,6 +15,14 @@ This is the notation for leetcode problems
 
 
 [1522. Diameter of N-Ary Tree](https://leetcode.com/problems/diameter-of-n-ary-tree/)  
+这个题跟上一个题其实很像，甚至可以把数据结构转换过去用上一个方法直接解决。  
+但因为这个题给的是TreeNode类型的数据，实用上一个题的方法不方便。  
+我们可以一个node的子节点的最大高度，那么到这个节点的最大直径就是 distance1Max + distance2Max + 2。 用dfs求每个节点的最大直径就可以解决这个问题。
+
+
+[501. Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/)   
+这题如果是普通的树，用一个map计数，然后遍历两遍总共花费2n的时间就可以。  
+但题目给了，这是一个Binary Search Tree，那么我们就要充分利用他的性质。BST的中序遍历是一个有序的数组，所以我们可以使用中序遍历直接统计一个数字的个数，这样有大count的时候前面的数字将被舍弃，不仅不需要额外的map的空间，也只要花费n的遍历时间。
 
 
 ## Binary Search(二分搜索)
