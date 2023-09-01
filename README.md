@@ -32,3 +32,68 @@ This is the notation for leetcode problems
 [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/)   
 
 这两个题目相当于是基础的二分搜索的进阶版本，很容易想到用binary search做，但是对于81题来说，因为有相同的元素，如何确定取前半段还是后半段还是有一定的难度的。
+
+
+# 位运算
+[191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/description/)  
+
+由于Java中没有unisigned int，所以他用2's complement notation来表示，所以不能用logn来计算位数。  
+第一种解法思路是，用mask为1，然后一直左移做"and"运算。
+```
+public class Solution {
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) {
+    int bits = 0;
+    int mask = 1;
+    for (int i = 0; i < 32; i++) {
+        if ((n & mask) != 0) {
+            bits++;
+        }
+        mask = mask << 1;
+    }
+    return bits;
+}
+}
+```
+
+因为到某一位以后就后面就都是0，可以不用比较了，所以直接用n&(n - 1)来做运算，比较过之后直接把后面的1置于0，每次十进制减去1都会把二进制的最后一个为1的bit置于0。
+```
+public class Solution {
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) {
+        int sum = 0;
+        while (n != 0) {
+            sum++;
+            n &= (n - 1);
+        }
+        return sum;
+    }   
+}
+```
+
+[338. Counting Bits](https://leetcode.com/problems/counting-bits/description/)  
+这个题用O(nlogn)的时间是很好做出来的，但是用dp可以在O(n)时间中做出来。
+```
+//P(x+b)=P(x)+1,b=2^m>x
+public class Solution {
+    public int[] countBits(int n) {
+        int[] ans = new int[n + 1];
+        int x = 0;
+        int b = 1;
+    
+        // [0, b) is calculated
+        while (b <= n) {
+            // generate [b, 2b) or [b, n) from [0, b)
+            while (x < b && x + b <= n) {
+                ans[x + b] = ans[x] + 1;
+                ++x;
+            }                         
+            x = 0; // reset x
+            b <<= 1; // b = 2b
+        }
+                  
+        return ans;
+    }
+}
+```
+
