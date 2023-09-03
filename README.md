@@ -112,7 +112,8 @@ A trie (pronounced as "try") or prefix tree is a tree data structure used to eff
 ```
 
 
-[2707. Extra Characters in a String](https://leetcode.com/problems/extra-characters-in-a-string/description/?envType=daily-question&envId=2023-09-02)
+[2707. Extra Characters in a String](https://leetcode.com/problems/extra-characters-in-a-string/description/?envType=daily-question&envId=2023-09-02)  
+这个题用自底向上的dp会很好想到思路！如果用substring是O(n^3)，用Trie是O(n^2 + N * M);
 ```
 
 ```
