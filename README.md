@@ -2,6 +2,7 @@
 This is the notation for leetcode problems
 
 
+
 ## 图
 ### 树类问题
 [1245. Tree Diameter](https://leetcode.com/problems/tree-diameter/)   
@@ -34,7 +35,7 @@ This is the notation for leetcode problems
 这两个题目相当于是基础的二分搜索的进阶版本，很容易想到用binary search做，但是对于81题来说，因为有相同的元素，如何确定取前半段还是后半段还是有一定的难度的。
 
 
-# 位运算
+## 位运算
 [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/description/)  
 
 由于Java中没有unisigned int，所以他用2's complement notation来表示，所以不能用logn来计算位数。  
@@ -96,4 +97,17 @@ public class Solution {
     }
 }
 ```
+
+## 字符串问题
+[139. Word Break](https://leetcode.com/problems/word-break/)  
+```
+
+```
+
+
+[2707. Extra Characters in a String](https://leetcode.com/problems/extra-characters-in-a-string/description/?envType=daily-question&envId=2023-09-02)
+```
+
+```
+
 
