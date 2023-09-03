@@ -99,6 +99,13 @@ public class Solution {
 ```
 
 ## 字符串问题
+
+[208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)  
+A trie (pronounced as "try") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.  
+前缀再很多时候可以帮我们简化substring的时间复杂度。
+```
+
+```
 [139. Word Break](https://leetcode.com/problems/word-break/)  
 ```
 
