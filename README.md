@@ -119,3 +119,9 @@ A trie (pronounced as "try") or prefix tree is a tree data structure used to eff
 ```
 
 
+# Greedy Problem 贪心问题
+## 比较难想的贪心
+[135 Candy](https://leetcode.com/problems/candy/description/?envType=daily-question&envId=2023-09-13)  
+这个题涉及的问题要牵扯到数组的两边，从贪心的角度思考，从两边发苹果，顺着发一次，再逆着发一次，每次在满足条件的情况下尽量少发即可。
+
+
