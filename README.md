@@ -34,6 +34,9 @@ This is the notation for leetcode problems
 
 这两个题目相当于是基础的二分搜索的进阶版本，很容易想到用binary search做，但是对于81题来说，因为有相同的元素，如何确定取前半段还是后半段还是有一定的难度的。
 
+[410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/description/)  
+找一个数组nums，分割成k个字数组后，怎么分，让子数组中最大和尽可能小。这个题可以利用二分的思想来做，非常巧妙。
+
 
 ## 位运算
 [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/description/)  
