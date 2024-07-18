@@ -5,8 +5,9 @@ This is the notation for leetcode problems
 
 ## 图
 ### 树类问题
-知识汇总
+#### 知识汇总
 1. 树的叶子结点和树的总节点个数是线性比例。
+
 [1245. Tree Diameter](https://leetcode.com/problems/tree-diameter/)   
 简化一下题目要求，就是求图中两个node的最远距离是多少。  
 思路：  
