@@ -40,6 +40,10 @@ This is the notation for leetcode problems
 [410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/description/)  
 找一个数组nums，分割成k个字数组后，怎么分，让子数组中最大和尽可能小。这个题可以利用二分的思想来做，非常巧妙。
 
+[1530. Number of Good Leaf Nodes Pairs](https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/description/?envType=daily-question&envId=2024-07-18)
+解法1，找到所有的叶子结点，把树变成双向图，从每个结点进行BFS，到深度为MAX depth的时候停止。
+解法2，直接用后序遍历，找到每个子树的node到leaf node的距离和个数，这样知道每个子结点 用子[2 + leftSubtreeLeafNodeDistance + rightSubtreeLeafNodeDistance]就知道每个叶子结点的之间的距离
+
 
 ## 位运算
 [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/description/)  
